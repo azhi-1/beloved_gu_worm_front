@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cyan-50: #ffffff;
+  --color-cyan-100: #fbf5e9;
+  --color-cyan-200: #f7ead2;
+  --color-cyan-300: #eed5a3;
+  --color-cyan-400: #e5bd6f;
+  --color-cyan-500: #d4af37;
+  --color-cyan-600: #b58d2a;
+  --color-cyan-700: #93701f;
+  --color-cyan-800: #7d5e1f;
+  --color-cyan-900: #423110;
+  --color-cyan-950: #251b07;
+
+  --color-blue-300: #eed5a3;
+  --color-blue-400: #e5bd6f;
+  --color-blue-500: #d4af37;
+  --color-blue-600: #b58d2a;
+  
+  --color-pink-50: #ffffff;
+  --color-pink-100: #eaf3f1;
+  --color-pink-200: #c5e1dc;
+  --color-pink-300: #a1d1c9;
+  --color-pink-400: #7bb0a6;
+  --color-pink-500: #7bb0a6;
+  --color-pink-600: #558d83;
+  --color-pink-800: #355751;
+  --color-pink-900: #2b4943;
+  --color-pink-950: #1b2f2b;
+
+  --color-slate-200: #e0d7c6;
+  --color-slate-300: #cbbfa7;
+  --color-slate-400: #b2a386;
+  --color-slate-500: #8c7e63;
+  --color-slate-800: #2a2d30;
+  --color-slate-900: #1a1c1e;
+  --color-slate-950: #0c0d0e;
+
+  /* Flatten all radii to match the sharp aesthetic except full (for some icons if necessary) */
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-lg: 0px;
+  --radius-md: 2px;
+  --radius-sm: 2px;
+
+  --font-serif: "Noto Serif SC", serif;
+  --font-cursive: "Noto Serif SC", serif;
+  --font-sans: "Noto Serif SC", serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Noto Serif SC", serif;
+  background-color: #0c0d0e;
+  color: #e0d7c6;
+  overflow: hidden;
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+}
+
+.glass-panel {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.ornament-border {
+  position: relative;
+}
+.ornament-border::before, .ornament-border::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+.ornament-border::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.ornament-border::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
