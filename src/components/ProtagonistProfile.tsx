@@ -66,7 +66,7 @@ export default function ProtagonistProfile() {
 
             <div className="absolute top-4 left-4 lg:top-8 lg:left-8 z-10">
               <div className="text-[10px] uppercase tracking-[0.4em] mb-2">{底蕴深度}</div>
-              <h1 className="text-3xl lg:text-4xl tracking-tighter">{主角名称} · <span className="italic font-light">多情尊者</span></h1>
+              <h1 className="text-3xl lg:text-4xl tracking-tighter">{主角名称}</h1>
               <div className="flex gap-4 mt-4">
                 <span className="px-3 py-1 bg-cyan-500 text-black text-[10px] font-bold">九转虚数</span>
                 <span className="px-3 py-1 border border-cyan-500 text-cyan-500 text-[10px]">{恋养总值} 点</span>

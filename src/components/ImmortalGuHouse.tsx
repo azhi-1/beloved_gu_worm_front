@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useMvuData, AreaEntry } from '../MvuStore';
+import { AreaEntry, useMvuData } from '../MvuStore';
 
 function AreaCard({ area, index }: { area: AreaEntry; index: number }) {
   const [expanded, setExpanded] = useState(false);
@@ -54,7 +54,7 @@ export default function ImmortalGuHouse() {
     <div className="pt-24 h-full relative z-10">
       <div className="flex items-end gap-4 mb-10">
         <h2 className="text-lg border-l-2 border-cyan-500 pl-3 text-slate-200">
-          仙屋·构型 <span className="text-[10px] opacity-40 ml-2 uppercase tracking-widest">Immortal Gu House</span>
+          仙蛊屋 <span className="text-[10px] opacity-40 ml-2 uppercase tracking-widest">Immortal Gu House</span>
         </h2>
       </div>
 

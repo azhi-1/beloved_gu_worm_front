@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useMvuData, KillerMoveEntry } from '../MvuStore';
+import { KillerMoveEntry, useMvuData } from '../MvuStore';
 
 function KillerMoveCard({ move }: { move: KillerMoveEntry }) {
   const [expanded, setExpanded] = useState(false);
@@ -56,7 +56,7 @@ export default function KillerMoves() {
     <div className="pt-24 h-full relative z-10">
       <div className="flex items-end gap-4 mb-8">
         <h2 className="text-lg border-l-2 border-cyan-500 pl-3 text-slate-200">
-          杀招·衍化 <span className="text-[10px] opacity-40 ml-2 uppercase tracking-widest">KILLER MOVES</span>
+          杀招 <span className="text-[10px] opacity-40 ml-2 uppercase tracking-widest">KILLER MOVES</span>
         </h2>
       </div>
 

@@ -12,7 +12,7 @@ export default function WorldForum() {
         <div className="flex-1 flex flex-col">
           <div className="flex items-end gap-4 mb-6">
             <h2 className="text-lg border-l-2 border-red-500 pl-3 uppercase tracking-widest text-slate-200">
-              五域·热议 <span className="text-[10px] opacity-40 ml-2">HOT TOPICS</span>
+              五域大论坛 <span className="text-[10px] opacity-40 ml-2">HOT TOPICS</span>
             </h2>
           </div>
 
@@ -48,7 +48,7 @@ export default function WorldForum() {
         <div className="w-full lg:w-[450px] shrink-0 flex flex-col h-full lg:h-[700px]">
           <div className="flex items-end gap-4 mb-6">
             <h2 className="text-lg border-l-2 border-green-500 pl-3 uppercase tracking-widest text-slate-200">
-              天道·直连 <span className="text-[10px] opacity-40 ml-2">HEAVEN'S WILL SURVEILLANCE</span>
+              天道直播间 <span className="text-[10px] opacity-40 ml-2">HEAVEN'S WILL SURVEILLANCE</span>
             </h2>
           </div>
 
@@ -69,13 +69,12 @@ export default function WorldForum() {
               {[...直播间弹幕].reverse().map((msg, idx) => (
                 <div
                   key={idx}
-                  className={`p-3 border-l-2 bg-black/40 ${
-                    msg.类型 === 'gift'
-                      ? 'border-yellow-500 text-yellow-100/90 shadow-[inset_2px_0_10px_rgba(234,179,8,0.1)]'
-                      : msg.类型 === 'slang'
-                        ? 'border-pink-500 text-pink-100/90 shadow-[inset_2px_0_10px_rgba(236,72,153,0.1)]'
-                        : 'border-cyan-500 text-slate-300 shadow-[inset_2px_0_10px_rgba(8,145,178,0.1)]'
-                  }`}
+                  className={`p-3 border-l-2 bg-black/40 ${msg.类型 === 'gift'
+                    ? 'border-yellow-500 text-yellow-100/90 shadow-[inset_2px_0_10px_rgba(234,179,8,0.1)]'
+                    : msg.类型 === 'slang'
+                      ? 'border-pink-500 text-pink-100/90 shadow-[inset_2px_0_10px_rgba(236,72,153,0.1)]'
+                      : 'border-cyan-500 text-slate-300 shadow-[inset_2px_0_10px_rgba(8,145,178,0.1)]'
+                    }`}
                 >
                   <div className="mb-1.5 opacity-60 text-[10px]">
                     <span className="text-white">[{msg.用户ID}]</span>
