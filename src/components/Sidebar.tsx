@@ -1,7 +1,6 @@
-import { User, Heart, Sparkles, Home, MessageSquare } from 'lucide-react';
+import { Heart, Sparkles, Home, MessageSquare } from 'lucide-react';
 
 const navItems = [
-  { id: 'profile', label: '档案', icon: User },
   { id: 'ties', label: '结缘', icon: Heart },
   { id: 'moves', label: '杀招', icon: Sparkles },
   { id: 'house', label: '仙屋', icon: Home },

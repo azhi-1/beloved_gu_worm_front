@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import TopBar from './components/TopBar';
-import ProtagonistProfile from './components/ProtagonistProfile';
 import TiesManagement from './components/TiesManagement';
 import KillerMoves from './components/KillerMoves';
 import ImmortalGuHouse from './components/ImmortalGuHouse';
@@ -22,7 +21,6 @@ export default function App() {
         <main className="flex-1 flex flex-col relative z-10 w-full h-full">
           <TopBar />
           <div className="flex-1 px-4 lg:px-8 pb-4 lg:pb-8 pt-0 overflow-y-auto w-full max-w-[1600px] mx-auto custom-scrollbar">
-            {activeTab === 'profile' && <ProtagonistProfile />}
             {activeTab === 'ties' && <TiesManagement />}
             {activeTab === 'moves' && <KillerMoves />}
             {activeTab === 'house' && <ImmortalGuHouse />}

@@ -47,24 +47,6 @@ export interface MvuData {
     世界事件: string[];
     天道蛊监视值: number;
   };
-  主角档案: {
-    主角名称: string;
-    底蕴深度: string;
-    基本属性: {
-      恋养总值: number;
-      后宫规模: string;
-      情蛊转世阶段: string;
-      情蛊觉醒度: number;
-    };
-    恋蛊流派: {
-      当前主修方式: string;
-      主修核心蛊: string;
-      顺恋进度: number;
-      混搭进度: number;
-      智性恋进度: number;
-      熟练度: Record<string, number>;
-    };
-  };
   结缘: {
     正宫档案: Record<string, GuWormEntry>;
     后宫列表: Record<string, GuWormEntry>;
@@ -90,31 +72,6 @@ export const mockData: MvuData = {
     时间: "蛊历 1245年 仲春",
     世界事件: ["天庭正在搜寻域外天魔", "北原举行情蛊大会", "东海鲛人族开放联姻"],
     天道蛊监视值: 16,
-  },
-  主角档案: {
-    主角名称: "方源",
-    底蕴深度: "十绝体 · 纯情如水晶",
-    基本属性: {
-      恋养总值: 9999,
-      后宫规模: "九转虚数 (∞)",
-      情蛊转世阶段: "四转",
-      情蛊觉醒度: 85,
-    },
-    恋蛊流派: {
-      当前主修方式: "顺恋/混搭",
-      主修核心蛊: "一见钟情蛊",
-      顺恋进度: 100,
-      混搭进度: 65,
-      智性恋进度: 88,
-      熟练度: {
-        "一见钟情蛊": 95,
-        "日久生情蛊": 80,
-        "至死不渝蛊": 100,
-        "比翼双飞蛊": 70,
-        "心有灵犀蛊": 90,
-        "情真意切蛊": 85,
-      },
-    },
   },
   结缘: {
     正宫档案: {
@@ -188,7 +145,7 @@ const readMvuData = (): MvuData | null => {
   try {
     const variables = w.Mvu.getMvuData({ type: 'message', message_id: w.getCurrentMessageId() });
     const stat_data = w._.get(variables, 'stat_data');
-    if (!stat_data || !stat_data.全局信息) return null;
+    if (!stat_data || !stat_data.全局信息 || !stat_data.结缘) return null;
     return stat_data as MvuData;
   } catch {
     return null;
